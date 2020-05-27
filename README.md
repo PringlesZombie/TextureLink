@@ -1,6 +1,18 @@
 # TextureLink
 It's a simple plugin Minecraft to provide pack ressource links to players.
 
+# Commands
+
+#### /texture
+* __permission__: default
+* Provide the different links for the texture.
+
+--------------------
+
+#### /texturelink reload
+* __permission__: op
+* Reload the config file.
+
 # Configuration
 
 ```
