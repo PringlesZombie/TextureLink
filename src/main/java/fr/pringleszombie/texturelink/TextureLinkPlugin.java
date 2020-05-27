@@ -1,6 +1,7 @@
 package fr.pringleszombie.texturelink;
 
 import fr.pringleszombie.texturelink.commands.TextureCommand;
+import fr.pringleszombie.texturelink.commands.TextureLinkCommand;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -22,6 +23,7 @@ public class TextureLinkPlugin extends JavaPlugin
         this.saveDefaultConfig();
         this.load();
         this.getCommand("texture").setExecutor(new TextureCommand(this));
+        this.getCommand("texturelink").setExecutor(new TextureLinkCommand(this));
     }
 
     @Override
@@ -30,12 +32,11 @@ public class TextureLinkPlugin extends JavaPlugin
 
 
 
-    private void load(){
+    public void load(){
         this.message = getConfig().getString("message");
         ConfigurationSection section = getConfig().getConfigurationSection("links");
         for(String key : section.getKeys(false)){
             ConfigurationSection sub = section.getConfigurationSection(key);
-            System.out.println(key);
             texturesConfig.put(key,new TextureConfig(sub.getString("prefix"),sub.getString("link"),sub.getString("suffix")));
         }
     }

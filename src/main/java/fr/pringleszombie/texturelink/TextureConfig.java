@@ -2,9 +2,9 @@ package fr.pringleszombie.texturelink;
 
 public class TextureConfig {
 
-    private String prefix;
-    private String link;
-    private String suffix;
+    private final String prefix;
+    private final String link;
+    private final String suffix;
 
     public TextureConfig(String prefix, String link, String suffix) {
         this.prefix = prefix;

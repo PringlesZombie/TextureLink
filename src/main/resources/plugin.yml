@@ -1,8 +1,8 @@
 name: TextureLink
-version: 1.0
+version: "1.0"
 main: fr.pringleszombie.texturelink.TextureLinkPlugin
 description: TextureLink provide a simple command to get the pack ressource of the server.
-api-version: 1.15
+api-version: "1.15"
 author: Pringles_zombie
 
 
@@ -10,5 +10,14 @@ commands:
   texture:
     description: "Provide resource pack link"
     permission-message: "You cannot execute this command !"
-    usage: "Usage: /texture"
+    usage: "Usage: /<command>"
     aliases: [tex,t,tt]
+  texturelink:
+    description: "Reload config file"
+    permission-message: "You cannot execute this command !"
+    usage: "Usage: /<command> reload"
+    aliases: [tl]
+permissions:
+  texturelink.reload:
+    description: Allows you to use the command /texturelink reload
+    default: op
