@@ -1,0 +1,14 @@
+name: TextureLink
+version: 1.1
+main: fr.pringleszombie.texturelink.TextureLinkPlugin
+description: TextureLink provide a simple command to get the pack ressource of the server.
+api-version: 1.15
+author: Pringles_zombie
+
+
+commands:
+  texture:
+    description: "Provide resource pack link"
+    permission-message: "You cannot execute this command !"
+    usage: "Usage: /texture"
+    aliases: [tex]
